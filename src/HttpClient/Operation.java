@@ -22,13 +22,15 @@ public class Operation {
 
         while (done) {
             System.out.println(
-                    "1) Dólar =>> Peso argentino\n" +
-                    "2) Peso argentino =>> Dólar\n" +
-                    "3) Dólar =>> Real brasileiro\n" +
-                    "4) Real brasileiro =>> Dólar\n" +
-                    "5) Dólar =>> Peso colombiano\n" +
-                    "6) Peso colombiano =>> Dólar\n" +
-                    "7) Sair\n" +
+                    "1) Dólar (USD) =>> Peso argentino (ARS)\n" +
+                    "2) Peso argentino (ARS) =>> Real brasileiro (BRL)\n" +
+                    "3) Real brasileiro (BRL) =>> Peso colombiano (COP)\n" +
+                    "4) Peso colombiano (COP) =>> Peso boliviano (BOB)\n" +
+                    "5) Peso boliviano (BOB) =>> Peso chileno (CLP)\n" +
+                    "6) Peso chileno (CLP) =>> Dólar (USD)\n" +
+                    "7) Dólar (USD) =>> Real brasileiro (BRL)\n" +
+                    "8) Peso colombiano (COP) =>> Dólar (USD)\n" +
+                    "9) Sair\n" +
                     "Escolha uma opção válida:");
 
 
@@ -41,30 +43,38 @@ public class Operation {
 
             switch (choice) {
                 case 1:
-                    convertCurrency(USD, ARS);
+                    convertCurrency(USD, ARS); // Dólar => Peso argentino
                     scanner.nextLine();
                     break;
                 case 2:
-                    convertCurrency(ARS, USD);
+                    convertCurrency(ARS, BRL); // Peso argentino => Real brasileiro
                     scanner.nextLine();
                     break;
                 case 3:
-                    convertCurrency(USD, BRL);
+                    convertCurrency(BRL, COP); // Real brasileiro => Peso colombiano
                     scanner.nextLine();
                     break;
                 case 4:
-                    convertCurrency(BRL, USD);
+                    convertCurrency(COP, BOB); // Peso colombiano => Peso boliviano
                     scanner.nextLine();
                     break;
                 case 5:
-                    convertCurrency(USD, COP);
+                    convertCurrency(BOB, CLP); // Peso boliviano => Peso chileno
                     scanner.nextLine();
                     break;
                 case 6:
-                    convertCurrency(COP, USD);
+                    convertCurrency(CLP, USD); // Peso chileno => Dólar
                     scanner.nextLine();
                     break;
                 case 7:
+                    convertCurrency(USD, BRL); // Dólar => Real brasileiro
+                    scanner.nextLine();
+                    break;
+                case 8:
+                    convertCurrency(COP, USD); // Peso colombiano => Dólar
+                    scanner.nextLine();
+                    break;
+                case 9:
                     System.out.println("Saindo");
                     done = false;
                     break;
