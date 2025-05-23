@@ -22,6 +22,8 @@ public class Operation {
 
         while (done) {
             System.out.println(
+                    "===================================================\n" +
+                    "Seja bem vindo(a) ao conversor de moedas! Para começar, escolha uma das opções abaixo:\n\n" +
                     "1) Dólar (USD) =>> Peso argentino (ARS)\n" +
                     "2) Peso argentino (ARS) =>> Real brasileiro (BRL)\n" +
                     "3) Real brasileiro (BRL) =>> Peso colombiano (COP)\n" +
@@ -31,8 +33,8 @@ public class Operation {
                     "7) Dólar (USD) =>> Real brasileiro (BRL)\n" +
                     "8) Peso colombiano (COP) =>> Dólar (USD)\n" +
                     "9) Sair\n" +
-                    "Escolha uma opção válida:");
-
+                    "===================================================\n" +
+                    "Escolha uma opção válida:\n");
 
             choice = scanner.nextInt();
 
@@ -97,7 +99,6 @@ public class Operation {
         double conversion = new Client().getCurrency(currency, currencyToConvert);
 
         System.out.println("Convertendo " + quantity + " [" + currency + "] para [" + currencyToConvert + "], o novo valor é de: " + quantity * conversion + "\n");
-
 
     }
 
