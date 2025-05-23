@@ -99,7 +99,7 @@ public class Operation {
         double conversion = new Client().getCurrency(currency, currencyToConvert);
 
         System.out.println("Convertendo " + quantity + " [" + currency + "] para [" + currencyToConvert + "], o novo valor é de: " + quantity * conversion + "\n");
-
+        scanner.nextLine();
     }
 
 }
