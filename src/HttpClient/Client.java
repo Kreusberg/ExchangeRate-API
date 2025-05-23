@@ -26,4 +26,8 @@ public class Client {
         return gson.fromJson(response.body(), Model.class);
     }
 
+    public double getCurrency(String currency, String desiredCurrency) throws IOException, InterruptedException {
+        return sendRequest(currency).getConversion_rates().get(desiredCurrency);
+    }
+
 }
